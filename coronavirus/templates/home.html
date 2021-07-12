@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            {% for x in api %}
+                <div class="col-sm">
+                    <div class="card" style="width: 18rem;">
+                        <img src="" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ x.name_ja}} - {{ x.name_en }}</h5>
+                            <p class="card-text">人口 - Population : {{x.population}} - これまでの事例 - Cases up to now: {{x.cases}}
+                                PCR: {{x.pcr}} - 入院 - Hospitalized: {{x.hospitalize}} - 重度の場合 - Severe Cases: {{x.severe}} - 死亡数 - Deaths: {{x.deaths}} 
+
+                            </p>
+                        <a href="" class="btn btn-secondary"></a>
+                        </div>
+                    </div>
+                <br/>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+<br/><br/>    
+
+
+{% endblock %}
